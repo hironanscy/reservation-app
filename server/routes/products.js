@@ -7,7 +7,7 @@ router.get('', function(req, res){
     Product.find().then(
         (data) => {
             res.json(data);
-            // console.log('respond-list');
+            console.log('respond-list');
         })
 })
 
@@ -16,7 +16,7 @@ router.get('/:productId', function(req, res){
     Product.findById(productId).then(
             (data) => {
                 res.json(data)
-                // console.log('respond-by-id');
+                console.log('respond-by-id');
         })
         .catch(
             (err) => {console.log(err);
