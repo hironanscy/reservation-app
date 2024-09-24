@@ -1,21 +1,26 @@
-<div class="container text-center">
-  <div class="myClass">
-    hello
-    <h1>
-    こんにちは
-    </h1>
-    </div>
-  <div class="row">
-    <div *ngFor="let product of products; let productId = index" class="col-sm">
-        <div class="card">
-            <a routerLink="{{ product._id }}" routerLinkActive="active" ariaCurrentWhenActive="page">
-                <img src="{{ product.coverImage }}" class="card-img-top" alt="placeholder">
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
-                </div>
-            </a>
-        </div>
+<div class="wrapper">
+  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('/img/phone-cover.jpg');">
+      <div class="filter"></div>
+  </div>
+  <div class="container text-center">
+    <div class="myClass">
+      hello
+      <h1>
+      こんにちは
+      </h1>
+      </div>
+    <div class="row">
+      <div *ngFor="let product of products; let productId = index" class="col-sm">
+          <div class="card">
+              <a routerLink="{{ product._id }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+                  <img src="{{ product.coverImage }}" class="card-img-top" alt="placeholder">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="card-text" *ngIf="product.description">{{ product.description }}</p>
+                  </div>
+              </a>
+          </div>
+      </div>
     </div>
   </div>
 </div>
